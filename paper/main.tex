@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[preprint]{colm2026_conference}
+
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{xurl}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\definecolor{citeblue}{rgb}{0.16, 0.42, 0.73}
+\hypersetup{colorlinks=true, citecolor=citeblue, linkcolor=citeblue, urlcolor=citeblue}
+\usepackage[capitalize,noabbrev]{cleveref}
+\lstset{basicstyle=\ttfamily\footnotesize, breaklines=true, breakatwhitespace=true, columns=fullflexible, frame=single, framerule=0.3pt, rulecolor=\color{gray!60}, xleftmargin=4pt, xrightmargin=4pt, aboveskip=6pt, belowskip=8pt}
+
+\input{eval_numbers}
+\input{analysis_numbers}
+\input{attribution_numbers}
+\newcommand{\sys}{De(ep)Composition}
+
+\title{\sys{}: Deep Research for Argumentation\\by Query Decomposition}
+
+\author{Justin Blumencranz \quad Jessie Dong \quad Yucheng Jiang \quad Monica S. Lam \\
+Stanford University \\
+\texttt{\{jmb25, jessiedong, yuchengj, lam\}@stanford.edu}
+}
+
+\begin{document}
+\maketitle
+\lhead{Preprint.}
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\input{sections/intro}
+\input{sections/related}
+\input{sections/problem}
+\input{sections/method}
+\input{sections/experiments}
+\input{sections/results}
+\input{sections/analysis}
+\input{sections/citations}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+\bibliography{refs}
+\bibliographystyle{colm2026_conference}
+
+\clearpage
+\appendix
+\input{sections/appendix}
+
+\end{document}

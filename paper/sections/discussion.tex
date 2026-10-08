@@ -1,0 +1,20 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{What the results support.}
+Three findings hold up across methods. \sys{} writes decisive reports: the rater found a firm stance far more often than in either baseline, and the lexical measurements agree, with fewer hedges on nine of ten motions and more commitment markers on all ten. It writes compact, densely cited reports organized around a claim. And its recursive composition, as implemented, does not preserve which source supports which claim, so its citations should not be trusted until the fix in \Cref{sec:citations} is validated end to end. The rater's higher scores for supported claims and evidence use reflect the first two findings, citations attached consistently in a compact report, more than the third.
+
+\paragraph{The stance result is partly a prompt.}
+The report prompt tells the model to argue the root answer and not to hedge, so a high firm-stance rate was expected from the prompt alone. The decomposition contributes a root answer with a definite format for the prompt to argue, but the experiment does not separate the two. The analysis adds a complication: titles and summaries commit, while half of the conclusions qualify or condition the claim. The final writing step sees a DAG whose branches cover both sides, and the balanced material reasserts itself at the end. An ablation that keeps the DAG and removes the stance instruction, one that keeps the instruction and removes the DAG, and one that asks for a conclusion consistent with the title would separate these effects.
+
+\paragraph{Why provenance fails in recursive composition.}
+Citations are pointers into a list, and the pipeline rebuilt the list at each level while copying the pointers unchanged. Any system that composes cited text recursively, by summarizing summaries or merging the outputs of sub-agents, faces the same risk, and the error is invisible to a reader and to a rubric that counts citation markers. Two design rules avoid it: give every source one identifier for the whole run, and never let a model refer to intermediate results by an identifier that the final text cannot resolve to a source. A lexical audit like the one here is a cheap check that either rule was followed, and attribution metrics with entailment models \citep{rashkin2023ais, gao2023alce} are a stronger one.
+
+\paragraph{Scale and raters.}
+Ten motions and six transcripts are too few for precise estimates, and the human scores come from one rater who is an author, blind to the system but not to the study. The judge in the debates is a small model applying a rubric from an unpublished course project. Two rubric metrics were dropped because their records were unusable. The paired measurements in \Cref{sec:analysis} have no rater, but they are lexical proxies, and the stance labels in \Cref{tab:stance} come from one reading.
+
+\paragraph{Uncontrolled factors.}
+The three systems differ in model, search backend, and prompt, so the comparison measures systems, not the decomposition alone. STORM was built to write balanced encyclopedia articles and is scored here on a task it was not designed for; its low firm-stance count is its design, not a failure. Deep Research's reports were produced in a commercial product whose internals and model version are not controllable. A controlled study would hold the backbone model and the search API fixed across a flat search agent, STORM, and \sys{}, run the ablations above, and score attribution with the test in \Cref{sec:citations} alongside human judgments.
+
+\paragraph{Cost.}
+A \sys{} run makes on the order of four model calls per leaf and a few per parent (\Cref{sec:method}), so its cost grows linearly with the graph, at several times the calls of a single-pass report. Most of what it retrieves is never cited: a median of \atUsedShare\% of the listed sources reach the report body. Pruning sources that no claim uses before the final step would shorten the bibliography without changing the argument.

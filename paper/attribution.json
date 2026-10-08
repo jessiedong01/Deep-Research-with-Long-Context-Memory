@@ -1,0 +1,157 @@
+{
+ "results": [
+  {
+   "setting": "validation",
+   "pairs": 63,
+   "claims": 25,
+   "median_pct": 0.04,
+   "pct_lo": 0.0,
+   "pct_hi": 0.08,
+   "top3": 0.8253968253968254,
+   "top3_chance": 0.11538461538461535,
+   "best_cited": 0.96,
+   "best_chance": 0.09692307692307693,
+   "mean_candidates": 26.0
+  },
+  {
+   "setting": "validation_pages",
+   "pairs": 24,
+   "claims": 19,
+   "median_pct": 0.0,
+   "pct_lo": 0.0,
+   "pct_hi": 0.1111111111111111,
+   "top3": 0.875,
+   "top3_chance": 0.3,
+   "best_cited": 0.8421052631578947,
+   "best_chance": 0.12631578947368424,
+   "mean_candidates": 10.0
+  },
+  {
+   "setting": "replay_old",
+   "pairs": 63,
+   "claims": 25,
+   "median_pct": 0.12,
+   "pct_lo": 0.08,
+   "pct_hi": 0.16,
+   "top3": 0.49206349206349204,
+   "top3_chance": 0.11538461538461535,
+   "best_cited": 0.52,
+   "best_chance": 0.09692307692307693,
+   "mean_candidates": 26.0
+  },
+  {
+   "setting": "replay_fixed",
+   "pairs": 63,
+   "claims": 25,
+   "median_pct": 0.04,
+   "pct_lo": 0.0,
+   "pct_hi": 0.08,
+   "top3": 0.8253968253968254,
+   "top3_chance": 0.11538461538461535,
+   "best_cited": 0.96,
+   "best_chance": 0.09692307692307693,
+   "mean_candidates": 26.0
+  },
+  {
+   "setting": "logged",
+   "pairs": 173,
+   "claims": 70,
+   "median_pct": 0.48,
+   "pct_lo": 0.44,
+   "pct_hi": 0.52,
+   "top3": 0.057803468208092484,
+   "top3_chance": 0.11538461538461538,
+   "best_cited": 0.04285714285714286,
+   "best_chance": 0.09505494505494504,
+   "mean_candidates": 26.0
+  },
+  {
+   "setting": "evaluation",
+   "pairs": 491,
+   "claims": 235,
+   "median_pct": 0.4666666666666667,
+   "pct_lo": 0.4,
+   "pct_hi": 0.5263157894736842,
+   "top3": 0.17718940936863545,
+   "top3_chance": 0.13663768910625368,
+   "best_cited": 0.14468085106382977,
+   "best_chance": 0.09516185156194405,
+   "mean_candidates": 22.40733197556008
+  },
+  {
+   "setting": "evaluation_cited",
+   "pairs": 491,
+   "claims": 235,
+   "median_pct": 0.42857142857142855,
+   "pct_lo": 0.4,
+   "pct_hi": 0.5,
+   "top3": 0.5560081466395111,
+   "top3_chance": 0.5143075356415479,
+   "best_cited": 0.4085106382978723,
+   "best_chance": 0.3581914893617022,
+   "mean_candidates": 6.191446028513238
+  }
+ ],
+ "concentration": [
+  {
+   "prompt": "creativity",
+   "bib": 31,
+   "used": 8,
+   "share_first5": 0.8764044943820225
+  },
+  {
+   "prompt": "moral_duty",
+   "bib": 38,
+   "used": 8,
+   "share_first5": 0.9024390243902439
+  },
+  {
+   "prompt": "foundation_models",
+   "bib": 37,
+   "used": 9,
+   "share_first5": 0.8269230769230769
+  },
+  {
+   "prompt": "israel_palestine",
+   "bib": 35,
+   "used": 9,
+   "share_first5": 0.7976190476190477
+  },
+  {
+   "prompt": "hedge_funds",
+   "bib": 30,
+   "used": 10,
+   "share_first5": 0.855072463768116
+  },
+  {
+   "prompt": "theism",
+   "bib": 36,
+   "used": 11,
+   "share_first5": 0.8137254901960784
+  },
+  {
+   "prompt": "afcfta",
+   "bib": 38,
+   "used": 7,
+   "share_first5": 0.9726027397260274
+  },
+  {
+   "prompt": "fed_rates",
+   "bib": 32,
+   "used": 7,
+   "share_first5": 0.9130434782608695
+  },
+  {
+   "prompt": "arctic_energy",
+   "bib": 33,
+   "used": 13,
+   "share_first5": 0.7230769230769231
+  },
+  {
+   "prompt": "semiconductors",
+   "bib": 39,
+   "used": 8,
+   "share_first5": 0.8679245283018868
+  }
+ ]
+}

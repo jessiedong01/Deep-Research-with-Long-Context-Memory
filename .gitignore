@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+output/*
+!output/results.json
+logs/
+.pytest_cache/
+paper/main.log
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.out
+
+# fetched page text (copyrighted; rebuilt by scripts/fetch_sources.py)
+data/source_text/

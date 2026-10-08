@@ -1,0 +1,13 @@
+{
+ "_note": "Reading of each De(ep)Composition report's title and final paragraph. side: for/against the motion as worded. title: claim | topic. ending: firm | conditional | qualified | compromise. Labels by reading the reports; check before citing.",
+ "creativity":        {"side": "for",     "title": "claim", "ending": "qualified",   "quote": "irreducibility persists, but only provisionally"},
+ "moral_duty":        {"side": "for",     "title": "claim", "ending": "qualified",   "quote": "The duty to care for strangers is real but tempered"},
+ "foundation_models": {"side": "against", "title": "claim", "ending": "firm",        "quote": "application-layer AI startups will generate higher, more sustainable risk-adjusted alpha"},
+ "israel_palestine":  {"side": "for",     "title": "claim", "ending": "firm",        "quote": "the prospective rewards ... justify determined pursuit"},
+ "hedge_funds":       {"side": "for",     "title": "topic", "ending": "conditional", "quote": "Only under these conditions can hedge funds ethically innovate"},
+ "theism":            {"side": "for",     "title": "claim", "ending": "conditional", "quote": "the preference for theistic morality depends fundamentally on one's valuation"},
+ "afcfta":            {"side": "for",     "title": "claim", "ending": "firm",        "quote": "transcends short-term adjustment costs to deliver broad-based prosperity"},
+ "fed_rates":         {"side": "neither", "title": "claim", "ending": "compromise",  "quote": "such a policy balance is essential"},
+ "arctic_energy":     {"side": "for",     "title": "claim", "ending": "firm",        "quote": "far outweigh the barriers"},
+ "semiconductors":    {"side": "for",     "title": "claim", "ending": "firm",        "quote": "superior capital returns, stronger R&D leadership, higher supply resilience"}
+}

@@ -1,0 +1,12 @@
+{
+  "step": "00_run_config",
+  "timestamp": "2025-11-18T22:30:21.001677",
+  "data": {
+    "topic": "Should the US adopt stablecoins as official currency",
+    "guideline": "Conduct a survey. Stop when information gain is low or hit the budget",
+    "max_retriever_calls": 1,
+    "max_depth": 2,
+    "max_nodes": 5,
+    "max_subtasks": 2
+  }
+}

@@ -1,36 +1,36 @@
-An agent that can do deep, multi-step research by creating and using a structured memory system instead of relying only on raw long-context prompts. The agent reads documents, generates table schemas, extracts information into those tables, and then answers complex questions by querying its own structured memory.
+# De(ep)Composition: Deep Research for Argumentation by Query Decomposition
 
-The goal is to show that LLMs can research topics over long horizons, track information over time, and synthesize details across many documents. This helps in domains like:
+Deep research pipelines summarize. Debate needs a side. De(ep)Composition is a deep research pipeline for argumentation: it decomposes a research question into a directed acyclic graph of sub-questions, answers the leaves by web search, composes each parent from its children under generated composition instructions, refines nodes whose answers have gaps, and writes a report that argues the root answer. The paper compares it with OpenAI Deep Research and STORM on debate-style prompts: [`paper/main.pdf`](paper/main.pdf).
 
-- hedge fund and investment research
+## Setup
 
-- scientific literature review
+```bash
+python -m venv .venv && .venv/bin/pip install -e .
+cp .env.example .env   # add an OpenAI (or Azure OpenAI) key and a Serper key
+```
 
-- policy analysis
+## Usage
 
-- any task requiring long-document reasoning or multi-source synthesis
+```bash
+.venv/bin/python src/deepcomposition/main.py
+```
 
-What the system does:
+The pipeline asks for a research question and writes the DAG, every node's answer, and the final report to `output/`. Every source gets one citation number for the whole run (`src/utils/citations.py`), and `src/utils/attribution_audit.py` checks whether each cited sentence matches the source it cites.
 
-- Reads documents and identifies what information needs to be tracked
+## Reproducing the paper's analysis
 
-- Creates relational schemas (tables, columns, relationships)
+```bash
+.venv/bin/python scripts/fetch_sources.py          # text of every source in the evaluated bibliographies
+.venv/bin/python scripts/text_analysis.py --check-links
+.venv/bin/python scripts/attribution.py
+.venv/bin/python scripts/draw_dag.py output/results.json paper/figs/example_dag.pdf
+cd paper && tectonic -X compile main.tex
+```
 
-- Extracts details from text and populates those tables
+## Data
 
-- Builds hierarchical research plans (outlines, stages, summaries)
+`data/reports/` holds the 20 retained evaluation reports (De(ep)Composition and STORM, 10 motions), the motions, and the stance labels. `output/results.json` and `examples/` hold the logs of two runs. `data/link_check.json` records the link check.
 
-- Answers hard questions using the structured memory rather than raw context
+## Authors
 
-
-Traditional long-context LLMs struggle with:
-
-- retrieving old details
-
-- tracking entities over time
-
-- connecting information across multiple sources
-
-- answering extremely specific, multi-document questions
-
-Structured memory helps overcome this by giving the model a persistent, queryable knowledge base.
+Justin Blumencranz and Jessie Dong, with Yucheng Jiang and Monica Lam.

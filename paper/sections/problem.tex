@@ -1,0 +1,16 @@
+\section{Problem Formulation}
+\label{sec:problem}
+
+\paragraph{Argumentative report generation.}
+The input is a motion $m$, a statement such as ``The U.S.\ Federal Reserve should prioritize maintaining high interest rates over stimulating growth.'' The output is a report $R$ that takes a position on $m$, supports it with claims, and attaches to every factual claim a citation to a retrieved source. Three properties define a good report. It is \emph{decisive}: it states and holds one position. It is \emph{grounded}: each cited claim is supported by the source it cites, the property that attribution studies call verifiability \citep{rashkin2023ais, liu2023verifiability}. It is \emph{connected}: the claims combine into a case for the position rather than a list of facts.
+
+\paragraph{Research DAGs.}
+\sys{} represents the research behind a report as a directed acyclic graph $G = (V, E)$ with a single root $r$ whose question is $m$. Each node $v$ carries a question $q_v$, an expected answer format $f_v$, an answer $a_v$, and a set of sources $S_v$. An edge $(u, v)$ means that $q_v$ is a sub-question of $q_u$. A leaf $v$ is answered by retrieval, $a_v = \textsc{Answer}(q_v, S_v)$ with $S_v$ the documents found for $q_v$. A parent $u$ with children $C(u)$ is answered by composition,
+\begin{equation}
+a_u = \textsc{Compose}\big(q_u,\ \{a_v : v \in C(u)\},\ \kappa_u\big), \qquad S_u = \textstyle\bigcup_{v \in C(u)} S_v,
+\label{eq:compose}
+\end{equation}
+where $\kappa_u$ are composition instructions that state how the children's answers combine. The report is written from the answered graph, $R = \textsc{Write}(m, G)$.
+
+\paragraph{Provenance.}
+Grounding in the final report requires that citations survive composition. Write $\mathrm{cite}(a_v)$ for the set of (claim, source) pairs in $a_v$. Composition preserves provenance if every pair that $a_u$ takes from a child is a pair of that child, so that a citation in the report can be traced through the graph to the leaf where the source was read. \Cref{sec:citations} measures whether the pipeline preserves provenance and shows where it did not.

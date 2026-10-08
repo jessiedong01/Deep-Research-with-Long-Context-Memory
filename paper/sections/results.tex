@@ -1,0 +1,44 @@
+\section{Results}
+\label{sec:results}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lccc}
+\toprule
+Metric & \sys{} & OpenAI Deep Research & Difference \\
+\midrule
+Stance consistency (\%) & \autoStanceDC & \autoStanceOAI & $+$23 \\
+Logical coherence (1--10) & \autoCoherenceDC & \autoCoherenceOAI & $+$1.6 \\
+Evidence integration (1--10) & \autoEvidenceDC & \autoEvidenceOAI & $+$1.8 \\
+Rebuttal specificity (1--10) & \autoRebuttalDC & \autoRebuttalOAI & $+$1.7 \\
+Persuasiveness (1--10) & \autoPersuasionDC & \autoPersuasionOAI & $+$0.9 \\
+Fluency (1--10) & \autoFluencyDC & \autoFluencyOAI & $-$0.9 \\
+\bottomrule
+\end{tabular}
+\caption{Automated debate scores, averaged over six transcripts (three motions, both sides), judged by GPT-4o-mini.}
+\label{tab:auto}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lccc}
+\toprule
+Metric & \sys{} & OpenAI Deep Research & STORM \\
+\midrule
+Supported-claims rate & \humSupportedDC & \humSupportedOAI & \humSupportedStorm \\
+Evidence utilization & \humUtilDC & \humUtilOAI & \humUtilStorm \\
+Logical connection quality (1--10) & \humLogicDC & \humLogicOAI & \humLogicStorm \\
+Firm stance (of 10 reports) & \humStanceDC & \humStanceOAI & \humStanceStorm \\
+\bottomrule
+\end{tabular}
+\caption{Human-coded scores on ten reports per system, one blind rater, means over reports.}
+\label{tab:human}
+\end{table}
+
+\paragraph{Automated debates.}
+\Cref{tab:auto} gives the judge's scores. \sys{} scored higher on stance consistency, coherence, evidence integration, rebuttal specificity, and persuasiveness, and lower on fluency. The judge's notes point to the same cause in each motion. In the theism debate, \sys{}'s Pro case opened with the claim that moral objectivity needs a transcendent anchor and supported it with sub-claims that each carried evidence, such as volunteering rates in religious populations; Deep Research's Con case rested on the Euthyphro dilemma and repeated it across turns with little new evidence. With the sides reversed, \sys{} argued Con through meta-ethical consistency, cross-cultural variation in moral codes, and secular moral psychology, each with empirical or historical support, while Deep Research's Pro turns restated earlier points. In the semiconductor debate, \sys{} broke its Pro case into measurable claims (cost of capital under the subsidies, research-to-fab integration, supply-chain resilience, projected yields) and its Con case into quantified dependencies, including a projected plateau of U.S.\ fabrication share near 14\% by 2032; Deep Research's cases on both sides stayed qualitative. In the creativity debate, \sys{} split its reasoning into an empirical branch citing divergent-thinking benchmarks and a conceptual branch that defined creativity as novelty with usefulness; Deep Research argued from metaphysical objections without an operational definition. Across the six transcripts \sys{} made about twice as many evidence-linked claims per transcript. The fluency gap runs the other way: Deep Research's turns read more smoothly, and \sys{}'s denser citation of sub-claims costs some flow.
+
+\paragraph{Human-coded reports.}
+\Cref{tab:human} gives the rater's scores. \sys{} had the highest supported-claims rate (\humSupportedDC{} against \humSupportedOAI{} and \humSupportedStorm{}), used the largest share of its evidence (\humUtilDC{} against \humUtilOAI{} and \humUtilStorm{}), and had the highest logical connection score (\humLogicDC{} against \humLogicOAI{} and \humLogicStorm{}). It held a firm stance in \humStanceDC{} of ten reports; Deep Research did in \humStanceOAI{} and STORM in \humStanceStorm{}. The rater's notes describe the difference. On the moral-duty motion, \sys{} built a layered argument linking empathy to social trust, Deep Research gave a balanced account that did not decide, and STORM described positions without causal links between them. On the Federal Reserve motion, \sys{} argued through a chain from inflation control to wage stability, while Deep Research summarized both effects without connecting them. On the foundation-model investment motion, \sys{} produced a conditional argument (foundation models concentrate capital efficiency unless model saturation reduces marginal returns) that neither baseline matched. The supported-claims difference has a plausible source in the pipeline: every leaf answer is written from search results with citation markers, and every parent is composed only from its children, so a claim without a marker has little path into the report. Whether the markers point to the right sources is a separate question that the rubric did not ask, and \Cref{sec:citations} answers it. The firm-stance gap follows in part from the report prompt, which instructs the model to argue the root answer; \Cref{sec:discussion} returns to this.

@@ -1,0 +1,105 @@
+{"timestamp": "2025-11-18T22:29:45.496519", "level": "INFO", "logger": "presearcher", "message": "Logging initialized. Run directory: output/logs/20251118_222945"}
+{"timestamp": "2025-11-18T22:29:45.496633", "level": "INFO", "logger": "presearcher", "message": "================================================================================"}
+{"timestamp": "2025-11-18T22:29:45.496672", "level": "INFO", "logger": "presearcher", "message": "Presearcher Pipeline Starting"}
+{"timestamp": "2025-11-18T22:29:45.496698", "level": "INFO", "logger": "presearcher", "message": "================================================================================"}
+{"timestamp": "2025-11-18T22:29:45.496718", "level": "INFO", "logger": "presearcher", "message": "Initializing presearcher agent..."}
+{"timestamp": "2025-11-18T22:29:45.516501", "level": "INFO", "logger": "presearcher", "message": "Presearcher agent initialized successfully"}
+{"timestamp": "2025-11-18T22:30:01.607961", "level": "INFO", "logger": "presearcher", "message": "User research task: Should the US adopt stablecoins as official currency"}
+{"timestamp": "2025-11-18T22:30:21.001265", "level": "INFO", "logger": "presearcher", "message": "Pipeline configuration: max_retriever_calls=1, max_depth=2, max_nodes=5, max_subtasks=2"}
+{"timestamp": "2025-11-18T22:30:21.001575", "level": "INFO", "logger": "presearcher", "message": "================================================================================"}
+{"timestamp": "2025-11-18T22:30:21.001608", "level": "INFO", "logger": "presearcher", "message": "Starting Three-Phase Research Pipeline for: Should the US adopt stablecoins as official currency"}
+{"timestamp": "2025-11-18T22:30:21.001632", "level": "INFO", "logger": "presearcher", "message": "================================================================================"}
+{"timestamp": "2025-11-18T22:30:21.002271", "level": "DEBUG", "logger": "presearcher", "message": "Saved intermediate results for 00_run_config", "data": {"file": "output/logs/20251118_222945/00_run_config.json"}}
+{"timestamp": "2025-11-18T22:30:21.002304", "level": "INFO", "logger": "presearcher", "message": "\n================================================================================"}
+{"timestamp": "2025-11-18T22:30:21.002327", "level": "INFO", "logger": "presearcher", "message": "PHASE 1: Generating Research DAG"}
+{"timestamp": "2025-11-18T22:30:21.002345", "level": "INFO", "logger": "presearcher", "message": "================================================================================"}
+{"timestamp": "2025-11-18T22:30:21.002366", "level": "INFO", "logger": "presearcher", "message": "Starting DAG generation for topic: Should the US adopt stablecoins as official currency"}
+{"timestamp": "2025-11-18T22:30:21.002384", "level": "INFO", "logger": "presearcher", "message": "Constraints: max_depth=2, max_nodes=5, max_subtasks=2"}
+{"timestamp": "2025-11-18T22:30:21.002476", "level": "INFO", "logger": "presearcher", "message": "Created root node: node_1"}
+{"timestamp": "2025-11-18T22:30:21.002543", "level": "INFO", "logger": "presearcher", "message": "Processing 1 nodes at depth 0"}
+{"timestamp": "2025-11-18T22:30:21.002578", "level": "DEBUG", "logger": "presearcher", "message": "Processing node node_1: Should the US adopt stablecoins as official currency"}
+{"timestamp": "2025-11-18T22:30:21.002607", "level": "DEBUG", "logger": "presearcher", "message": "Starting literature search for topic: Should the US adopt stablecoins as official currency"}
+{"timestamp": "2025-11-18T22:30:21.002624", "level": "DEBUG", "logger": "presearcher", "message": "Running completeness check..."}
+{"timestamp": "2025-11-18T22:30:23.718446", "level": "DEBUG", "logger": "presearcher", "message": "Completeness check: False, reasoning: No aspect of the topic has been covered yet; major dimensions including definition, pros/cons, and feasibility must be explored for a quick overview."}
+{"timestamp": "2025-11-18T22:30:23.718579", "level": "DEBUG", "logger": "presearcher", "message": "Generated 3 next questions for exploration"}
+{"timestamp": "2025-11-18T22:30:50.790558", "level": "DEBUG", "logger": "presearcher", "message": "Node node_1 output format: report"}
+{"timestamp": "2025-11-18T22:30:54.806176", "level": "DEBUG", "logger": "presearcher", "message": "Node node_1 decomposing into 2 subtasks"}
+{"timestamp": "2025-11-18T22:30:54.806311", "level": "DEBUG", "logger": "presearcher", "message": "Created child node node_2 for parent node_1"}
+{"timestamp": "2025-11-18T22:30:54.806349", "level": "DEBUG", "logger": "presearcher", "message": "Created child node node_3 for parent node_1"}
+{"timestamp": "2025-11-18T22:30:54.806372", "level": "INFO", "logger": "presearcher", "message": "Processing 2 nodes at depth 1"}
+{"timestamp": "2025-11-18T22:30:54.806443", "level": "DEBUG", "logger": "presearcher", "message": "Processing node node_2: What are the potential economic and financial benefits that could result from the United States adopting stablecoins as an official currency, considering factors such as monetary policy efficiency, transaction speed, and global competitiveness?"}
+{"timestamp": "2025-11-18T22:30:54.806464", "level": "DEBUG", "logger": "presearcher", "message": "Starting literature search for topic: What are the potential economic and financial benefits that could result from the United States adopting stablecoins as an official currency, considering factors such as monetary policy efficiency, transaction speed, and global competitiveness?"}
+{"timestamp": "2025-11-18T22:30:54.806479", "level": "DEBUG", "logger": "presearcher", "message": "Running completeness check..."}
+{"timestamp": "2025-11-18T22:30:57.571614", "level": "DEBUG", "logger": "presearcher", "message": "Completeness check: False, reasoning: None of the key dimensions\u2014monetary policy, transaction speed, or global competitiveness\u2014have been explored yet, so the survey is incomplete and foundational questions are required for a balanced overview."}
+{"timestamp": "2025-11-18T22:30:57.571722", "level": "DEBUG", "logger": "presearcher", "message": "Generated 3 next questions for exploration"}
+{"timestamp": "2025-11-18T22:32:21.336980", "level": "DEBUG", "logger": "presearcher", "message": "Node node_2 output format: report"}
+{"timestamp": "2025-11-18T22:32:21.337357", "level": "DEBUG", "logger": "presearcher", "message": "Node node_2 cannot decompose (depth or node limits)"}
+{"timestamp": "2025-11-18T22:32:21.337405", "level": "DEBUG", "logger": "presearcher", "message": "Processing node node_3: What are the potential risks and challenges that the United States could face by adopting stablecoins as an official currency, including issues related to financial stability, monetary sovereignty, regulatory oversight, and cybersecurity?"}
+{"timestamp": "2025-11-18T22:32:21.337427", "level": "DEBUG", "logger": "presearcher", "message": "Starting literature search for topic: What are the potential risks and challenges that the United States could face by adopting stablecoins as an official currency, including issues related to financial stability, monetary sovereignty, regulatory oversight, and cybersecurity?"}
+{"timestamp": "2025-11-18T22:32:21.337442", "level": "DEBUG", "logger": "presearcher", "message": "Running completeness check..."}
+{"timestamp": "2025-11-18T22:32:24.306211", "level": "DEBUG", "logger": "presearcher", "message": "Completeness check: False, reasoning: No tasks have been completed, so all major topic dimensions (financial stability, monetary sovereignty, regulatory oversight, cybersecurity) remain unexplored; to meet the guideline's purpose, an initial overview must address each of these primary risks and challenges."}
+{"timestamp": "2025-11-18T22:32:24.306335", "level": "DEBUG", "logger": "presearcher", "message": "Generated 3 next questions for exploration"}
+{"timestamp": "2025-11-18T22:33:17.967852", "level": "DEBUG", "logger": "presearcher", "message": "Node node_3 output format: report"}
+{"timestamp": "2025-11-18T22:33:17.968048", "level": "DEBUG", "logger": "presearcher", "message": "Node node_3 cannot decompose (depth or node limits)"}
+{"timestamp": "2025-11-18T22:33:17.968124", "level": "INFO", "logger": "presearcher", "message": "DAG generation complete: 3 nodes across 2 depths"}
+{"timestamp": "2025-11-18T22:33:17.969093", "level": "DEBUG", "logger": "presearcher", "message": "Saved intermediate results for 00_dag_generation", "data": {"file": "output/logs/20251118_222945/00_dag_generation.json"}}
+{"timestamp": "2025-11-18T22:33:17.969603", "level": "DEBUG", "logger": "presearcher", "message": "Saved intermediate results for recursive_graph", "data": {"file": "output/logs/20251118_222945/recursive_graph.json"}}
+{"timestamp": "2025-11-18T22:33:17.969662", "level": "INFO", "logger": "presearcher", "message": "\u2713 DAG generated with 3 nodes"}
+{"timestamp": "2025-11-18T22:33:17.969724", "level": "INFO", "logger": "presearcher", "message": "\n================================================================================"}
+{"timestamp": "2025-11-18T22:33:17.969767", "level": "INFO", "logger": "presearcher", "message": "PHASE 2: Processing DAG (Leaves to Root)"}
+{"timestamp": "2025-11-18T22:33:17.969811", "level": "INFO", "logger": "presearcher", "message": "================================================================================"}
+{"timestamp": "2025-11-18T22:33:17.969854", "level": "INFO", "logger": "presearcher", "message": "Starting DAG processing"}
+{"timestamp": "2025-11-18T22:33:17.969895", "level": "INFO", "logger": "presearcher", "message": "Total nodes to process: 3"}
+{"timestamp": "2025-11-18T22:33:17.969954", "level": "INFO", "logger": "presearcher", "message": "Processing order: 2 layers"}
+{"timestamp": "2025-11-18T22:33:17.969998", "level": "INFO", "logger": "presearcher", "message": "  Layer 0: 2 nodes at depth 1"}
+{"timestamp": "2025-11-18T22:33:17.970043", "level": "INFO", "logger": "presearcher", "message": "  Layer 1: 1 nodes at depth 0"}
+{"timestamp": "2025-11-18T22:33:17.970083", "level": "INFO", "logger": "presearcher", "message": "Processing layer 0 with 2 nodes"}
+{"timestamp": "2025-11-18T22:33:17.970275", "level": "DEBUG", "logger": "presearcher", "message": "Processing node node_2: What are the potential economic and financial benefits that could result from the United States adopting stablecoins as an official currency, considering factors such as monetary policy efficiency, transaction speed, and global competitiveness?"}
+{"timestamp": "2025-11-18T22:33:17.970327", "level": "DEBUG", "logger": "presearcher", "message": "Leaf node node_2: conducting literature search"}
+{"timestamp": "2025-11-18T22:33:17.970350", "level": "DEBUG", "logger": "presearcher", "message": "Starting literature search for topic: What are the potential economic and financial benefits that could result from the United States adopting stablecoins as an official currency, considering factors such as monetary policy efficiency, transaction speed, and global competitiveness?"}
+{"timestamp": "2025-11-18T22:33:17.970366", "level": "DEBUG", "logger": "presearcher", "message": "Running completeness check..."}
+{"timestamp": "2025-11-18T22:33:17.971968", "level": "DEBUG", "logger": "presearcher", "message": "Processing node node_3: What are the potential risks and challenges that the United States could face by adopting stablecoins as an official currency, including issues related to financial stability, monetary sovereignty, regulatory oversight, and cybersecurity?"}
+{"timestamp": "2025-11-18T22:33:17.972371", "level": "DEBUG", "logger": "presearcher", "message": "Leaf node node_3: conducting literature search"}
+{"timestamp": "2025-11-18T22:33:17.972397", "level": "DEBUG", "logger": "presearcher", "message": "Starting literature search for topic: What are the potential risks and challenges that the United States could face by adopting stablecoins as an official currency, including issues related to financial stability, monetary sovereignty, regulatory oversight, and cybersecurity?"}
+{"timestamp": "2025-11-18T22:33:17.972411", "level": "DEBUG", "logger": "presearcher", "message": "Running completeness check..."}
+{"timestamp": "2025-11-18T22:33:20.424136", "level": "DEBUG", "logger": "presearcher", "message": "Completeness check: False, reasoning: No major dimensions or subtopics have been explored yet, so comprehensive coverage is not achieved."}
+{"timestamp": "2025-11-18T22:33:20.424253", "level": "DEBUG", "logger": "presearcher", "message": "Generated 3 next questions for exploration"}
+{"timestamp": "2025-11-18T22:33:21.544755", "level": "DEBUG", "logger": "presearcher", "message": "Completeness check: False, reasoning: No dimensions of the topic have been explored yet, and answering these distinct, critical questions is necessary for a comprehensive survey as per the guideline."}
+{"timestamp": "2025-11-18T22:33:21.544836", "level": "DEBUG", "logger": "presearcher", "message": "Generated 3 next questions for exploration"}
+{"timestamp": "2025-11-18T22:34:24.016335", "level": "DEBUG", "logger": "presearcher", "message": "Leaf node node_2: formatted answer as report"}
+{"timestamp": "2025-11-18T22:34:24.016827", "level": "DEBUG", "logger": "presearcher", "message": "Node node_2 complete"}
+{"timestamp": "2025-11-18T22:34:24.526425", "level": "DEBUG", "logger": "presearcher", "message": "Leaf node node_3: formatted answer as report"}
+{"timestamp": "2025-11-18T22:34:24.526537", "level": "DEBUG", "logger": "presearcher", "message": "Node node_3 complete"}
+{"timestamp": "2025-11-18T22:34:24.526726", "level": "INFO", "logger": "presearcher", "message": "Layer 0 complete"}
+{"timestamp": "2025-11-18T22:34:24.527836", "level": "DEBUG", "logger": "presearcher", "message": "Saved intermediate results for dag_processing_snapshot", "data": {"file": "output/logs/20251118_222945/dag_processing_snapshot.json"}}
+{"timestamp": "2025-11-18T22:34:24.527873", "level": "INFO", "logger": "presearcher", "message": "Processing layer 1 with 1 nodes"}
+{"timestamp": "2025-11-18T22:34:24.528951", "level": "DEBUG", "logger": "presearcher", "message": "Processing node node_1: Should the US adopt stablecoins as official currency"}
+{"timestamp": "2025-11-18T22:34:24.528985", "level": "DEBUG", "logger": "presearcher", "message": "Parent node node_1: synthesizing 2 children"}
+{"timestamp": "2025-11-18T22:34:43.673325", "level": "DEBUG", "logger": "presearcher", "message": "Parent node node_1: synthesis complete"}
+{"timestamp": "2025-11-18T22:34:43.673424", "level": "DEBUG", "logger": "presearcher", "message": "Node node_1 complete"}
+{"timestamp": "2025-11-18T22:34:43.673594", "level": "INFO", "logger": "presearcher", "message": "Layer 1 complete"}
+{"timestamp": "2025-11-18T22:34:43.674914", "level": "DEBUG", "logger": "presearcher", "message": "Saved intermediate results for dag_processing_snapshot", "data": {"file": "output/logs/20251118_222945/dag_processing_snapshot.json"}}
+{"timestamp": "2025-11-18T22:34:43.674971", "level": "INFO", "logger": "presearcher", "message": "DAG processing complete"}
+{"timestamp": "2025-11-18T22:34:43.675825", "level": "DEBUG", "logger": "presearcher", "message": "Saved intermediate results for 01_dag_processed", "data": {"file": "output/logs/20251118_222945/01_dag_processed.json"}}
+{"timestamp": "2025-11-18T22:34:43.676439", "level": "DEBUG", "logger": "presearcher", "message": "Saved intermediate results for recursive_graph", "data": {"file": "output/logs/20251118_222945/recursive_graph.json"}}
+{"timestamp": "2025-11-18T22:34:43.676473", "level": "INFO", "logger": "presearcher", "message": "\u2713 DAG processed: 3/3 nodes completed"}
+{"timestamp": "2025-11-18T22:34:43.676504", "level": "INFO", "logger": "presearcher", "message": "\n================================================================================"}
+{"timestamp": "2025-11-18T22:34:43.676524", "level": "INFO", "logger": "presearcher", "message": "PHASE 3: Generating Final Report"}
+{"timestamp": "2025-11-18T22:34:43.676542", "level": "INFO", "logger": "presearcher", "message": "================================================================================"}
+{"timestamp": "2025-11-18T22:34:43.676565", "level": "INFO", "logger": "presearcher", "message": "Starting final report generation"}
+{"timestamp": "2025-11-18T22:34:43.676588", "level": "DEBUG", "logger": "presearcher", "message": "Built DAG structure summary"}
+{"timestamp": "2025-11-18T22:34:43.676623", "level": "DEBUG", "logger": "presearcher", "message": "Collected results from 3 nodes"}
+{"timestamp": "2025-11-18T22:34:43.676640", "level": "INFO", "logger": "presearcher", "message": "Collected 6 unique citations"}
+{"timestamp": "2025-11-18T22:34:54.021170", "level": "DEBUG", "logger": "presearcher", "message": "Generated report outline"}
+{"timestamp": "2025-11-18T22:35:19.516325", "level": "INFO", "logger": "presearcher", "message": "Generated final report"}
+{"timestamp": "2025-11-18T22:35:19.517299", "level": "DEBUG", "logger": "presearcher", "message": "Saved intermediate results for 02_final_report", "data": {"file": "output/logs/20251118_222945/02_final_report.json"}}
+{"timestamp": "2025-11-18T22:35:19.517336", "level": "INFO", "logger": "presearcher", "message": "\u2713 Final report generated (10410 characters, 6 citations)"}
+{"timestamp": "2025-11-18T22:35:19.518127", "level": "DEBUG", "logger": "presearcher", "message": "Saved intermediate results for recursive_graph", "data": {"file": "output/logs/20251118_222945/recursive_graph.json"}}
+{"timestamp": "2025-11-18T22:35:19.518155", "level": "INFO", "logger": "presearcher", "message": "\n================================================================================"}
+{"timestamp": "2025-11-18T22:35:19.518182", "level": "INFO", "logger": "presearcher", "message": "Pipeline completed successfully!"}
+{"timestamp": "2025-11-18T22:35:19.518201", "level": "INFO", "logger": "presearcher", "message": "================================================================================"}
+{"timestamp": "2025-11-18T22:35:19.518278", "level": "INFO", "logger": "presearcher", "message": "Saving final results to output/results.json"}
+{"timestamp": "2025-11-18T22:35:19.519131", "level": "INFO", "logger": "presearcher", "message": "================================================================================"}
+{"timestamp": "2025-11-18T22:35:19.519168", "level": "INFO", "logger": "presearcher", "message": "Pipeline completed successfully! Results saved to output/results.json"}
+{"timestamp": "2025-11-18T22:35:19.519187", "level": "INFO", "logger": "presearcher", "message": "Intermediate results and logs saved to output/logs/"}
+{"timestamp": "2025-11-18T22:35:19.519205", "level": "INFO", "logger": "presearcher", "message": "================================================================================"}
